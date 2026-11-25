@@ -1,46 +1,37 @@
 <div align="center">
-  <h1>Merhaba, ben Gunewr7 (GwrSTD) 👋</h1>
-  <p><strong>Çevrimdışı çalışan pratik mobil uygulamalar, 3B görselleştirme araçları ve Minecraft Java yardımcı yazılımları geliştiriyorum.</strong></p>
+  <h1>Hi, I'm Gunewr7 (GwrSTD) 👋</h1>
+  <p><strong>Building offline-first mobile apps, 3D geometry tools, and Minecraft Java utilities with Rust and Android.</strong></p>
 
   <p>
     <a href="https://github.com/GwrSTD/render-builds">
-      <img src="https://img.shields.io/badge/Öne%20Çıkan%20Proje-Render%20Builds-34d399?style=for-the-badge" alt="Render Builds" />
+      <img src="https://img.shields.io/badge/Featured-Render%20Builds-007AFF?style=for-the-badge" alt="Render Builds" />
     </a>
     <a href="https://github.com/GwrSTD/render-builds/releases/latest/download/Render-Builds.apk">
-      <img src="https://img.shields.io/badge/Android%20APK-Tek%20Tıkla%20İndir-e08a3c?style=for-the-badge&logo=android&logoColor=white" alt="Render Builds APK İndir" />
+      <img src="https://img.shields.io/badge/Android%20APK-Download-34C759?style=for-the-badge&logo=android&logoColor=white" alt="Download Render Builds APK" />
     </a>
   </p>
 </div>
 
 ---
 
-## Öne Çıkan Proje
+## Featured Project
 
-### 🏠 [Render Builds](https://github.com/GwrSTD/render-builds)
-Tamamen çevrimdışı (yapay zeka API'si veya internet bağlantısı olmadan) çalışan Türkçe **Android** uygulaması.
+### 🧊 [Render Builds](https://github.com/GwrSTD/render-builds)
+A **100% offline, Rust-powered Android app** that converts front, side, and top photos into Minecraft Java `.schem` schematics—with zero AI APIs and zero network permissions.
 
-- **3 Fotoğraftan 3D Visual Hull:** Önden, yandan ve üstten fotoğraflarla eşik kaydırıcılı siluet kesme ve 3B voksel yeniden oluşturma
-- **Minecraft Java Blok Eşleme:** CIELAB algısal renk eşleme, hazır mimari palet temaları ve tek tıkla blok değiştirme
-- **Dönen 3D Önizleme & 2D Katman Düzenleyici:** WebGL 3B görünüm, katman kesiti, blok ekle/sil, 2 bloklu kapı, pencere ve geri al
-- **Sponge v2 `.schem` Dışa Aktarma:** Gzip sıkıştırılmış NBT şematik dosyasını yerel Android **MediaStore** eklentisiyle doğrudan İndirilenler klasörüne yazar
+- **Native Rust Engine:** Image decoding, threshold silhouette extraction, 3D Visual Hull reconstruction, CIELAB block matching, face-culled 3D meshing, and Gzip-compressed Sponge v2 NBT export compiled to native ARM64/ARMv7 via JNI
+- **Clean Apple HIG-Inspired Design:** Calm Light & Dark appearance, translucent controls, layer-by-layer 2D editing (doors, windows, undo/redo), and built-in English & Turkish support
+- **Direct Android Downloads Export:** Writes `.schem` files directly to Android **Downloads** using native Rust JNI → `MediaStore`
 
-👉 [**Depoyu İncele**](https://github.com/GwrSTD/render-builds) • [**Render-Builds.apk İndir**](https://github.com/GwrSTD/render-builds/releases/latest/download/Render-Builds.apk) • [**Sürümler**](https://github.com/GwrSTD/render-builds/releases)
+👉 [**Explore Repository**](https://github.com/GwrSTD/render-builds) • [**Download Render-Builds.apk**](https://github.com/GwrSTD/render-builds/releases/latest/download/Render-Builds.apk) • [**Releases**](https://github.com/GwrSTD/render-builds/releases)
 
 ---
 
-## Kullandığım Teknolojiler ve Araçlar
+## Tech Stack
 
-| Alan | Teknolojiler |
+| Area | Tools & Technologies |
 | --- | --- |
-| **Web & 3B Grafik** | `HTML5` · `CSS3` · `JavaScript (ESM)` · `WebGL` · `Canvas 2D` |
-| **Mobil (Android)** | `Capacitor` · `Java` · `Android MediaStore API` · `Gradle` |
-| **Minecraft & Dosya Biçimleri** | `Sponge Schematic v2 (.schem)` · `NBT` · `Gzip` · `WorldEdit / Litematica` |
-| **Otomasyon (CI/CD)** | `GitHub Actions` · `APK Signing (zipalign / apksigner)` · `GitHub Releases` |
-
----
-
-## Odaklandığım İlkeler
-
-- **Önce Çevrimdışı:** Kullanıcı verisini dış sunuculara göndermeyen, internet olmadan da tam performansla çalışan araçlar.
-- **Doğrudan Kullanılabilir Çıktı:** Karmaşık kurulumlar yerine tek tıkla kurulabilir APK ve Minecraft'a doğrudan yapıştırılabilir `.schem` dosyaları.
-- **Temiz ve Test Edilebilir Kod:** Harici bağımlılığı en aza indirilmiş, otomatik testlerle ve bulut derlemeleriyle doğrulanan projeler.
+| **Systems & Core** | `Rust` · `JNI` · `Android NDK` · `WebGL` |
+| **Mobile** | `Android` · `Gradle` · `MediaStore API` · `Apple HIG Design` |
+| **Minecraft Formats** | `Sponge Schematic v2 (.schem)` · `NBT` · `Gzip (flate2)` · `WorldEdit / Litematica` |
+| **Automation** | `GitHub Actions` · `Cross-Compilation` · `APK Signing` · `GitHub Releases` |
